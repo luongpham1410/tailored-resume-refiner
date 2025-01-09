@@ -75,15 +75,15 @@ const Index = () => {
   const letterGrade = "B+";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F1F0FB] to-[#D3E4FD]">
+    <div className="min-h-screen bg-gradient-to-b from-[#F8FAFC] to-[#E2E8F0]">
       <div className="container max-w-4xl py-12">
-        <div className="glass-card rounded-xl p-8 mb-8 text-center animate-fade-in bg-white/90 backdrop-blur-sm border border-[#0EA5E9]/20 shadow-lg">
-          <h1 className="text-3xl font-semibold mb-6 text-[#222222]">Resume Analysis</h1>
+        <div className="glass-card rounded-xl p-8 mb-8 text-center animate-fade-in bg-white/90 backdrop-blur-sm border border-[#1E3A8A]/20 shadow-lg">
+          <h1 className="text-3xl font-semibold mb-6 text-[#1E3A8A]">Resume Analysis</h1>
           <div className="flex flex-col items-center gap-4">
             <ScoreCircle score={overallScore} />
-            <div className="text-2xl font-bold text-[#222222]">Grade: {letterGrade}</div>
+            <div className="text-2xl font-bold text-[#1E3A8A]">Grade: {letterGrade}</div>
           </div>
-          <p className="mt-4 text-[#555555]">
+          <p className="mt-4 text-[#475569]">
             Your resume shows strong potential with excellent academic credentials and research experience.
             Here are detailed suggestions to make it even better.
           </p>
