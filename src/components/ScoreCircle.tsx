@@ -20,7 +20,7 @@ export const ScoreCircle = ({ score, size = 120, strokeWidth = 8 }: ScoreCircleP
     <div className="relative inline-flex items-center justify-center">
       <svg className="progress-ring" width={size} height={size}>
         <circle
-          className="text-muted stroke-current"
+          className="text-sky-100 stroke-current"
           strokeWidth={strokeWidth}
           fill="transparent"
           r={radius}
@@ -28,7 +28,7 @@ export const ScoreCircle = ({ score, size = 120, strokeWidth = 8 }: ScoreCircleP
           cy={size / 2}
         />
         <circle
-          className="text-primary stroke-current animate-progress"
+          className="text-sky-500 stroke-current animate-progress"
           strokeWidth={strokeWidth}
           fill="transparent"
           r={radius}
@@ -41,8 +41,8 @@ export const ScoreCircle = ({ score, size = 120, strokeWidth = 8 }: ScoreCircleP
         />
       </svg>
       <div className="absolute flex flex-col items-center justify-center">
-        <span className="text-4xl font-semibold">{score}</span>
-        <span className="text-sm text-muted-foreground">out of 100</span>
+        <span className="text-4xl font-semibold text-sky-700">{score}</span>
+        <span className="text-sm text-sky-600">out of 100</span>
       </div>
     </div>
   );

@@ -1,50 +1,66 @@
 import { ScoreCircle } from "@/components/ScoreCircle";
 import { FeedbackSection } from "@/components/FeedbackSection";
+import { Award, BookOpen, Briefcase, Code, GraduationCap, ScrollText } from "lucide-react";
 
 const feedbackSections = [
   {
+    title: "Education",
+    icon: <GraduationCap className="w-5 h-5" />,
+    score: 95,
+    strengths: ["GPA of 3.78/4.00 is impressive", "Relevant coursework in Computer Science and AI"],
+    improvements: ["Consider adding relevant certifications"],
+  },
+  {
     title: "Research Experience",
-    score: 85,
-    questions: [
-      "Can you quantify the outcomes of your research?",
-      "What were the key performance improvements in your fine-tuning methods?",
-      "How did your pipeline for MOF synthesis impact data accessibility?",
-      "Did any projects lead to actionable implementations or collaborations?",
+    icon: <ScrollText className="w-5 h-5" />,
+    score: 90,
+    strengths: [
+      "Extensive involvement in NLP, AI, and healthcare projects",
+      "Clear outline of contributions and outcomes",
+    ],
+    improvements: [
+      "Quantify research outcomes more specifically",
+      "Add details about collaboration with other teams",
     ],
   },
   {
     title: "Publications",
-    score: 90,
-    questions: [
-      "Can you elaborate on your role in the published papers?",
-      "Were you involved in writing, experimentation, or data analysis?",
-      "Have you presented any research at conferences or workshops?",
-    ],
-  },
-  {
-    title: "Projects",
-    score: 80,
-    questions: [
-      "What challenges did you face while extending the clip-retrieval system?",
-      "How is this project being used or applied currently?",
-      "What specific improvements did your LTI Attendance System provide?",
+    icon: <BookOpen className="w-5 h-5" />,
+    score: 85,
+    strengths: ["Q1-ranked journal article", "Multiple academic papers"],
+    improvements: [
+      "Clarify your role in each publication",
+      "Add conference presentations if applicable",
     ],
   },
   {
     title: "Work Experience",
-    score: 75,
-    questions: [
-      "Can you provide specific examples of backend features implemented?",
-      "Did your work lead to measurable improvements?",
-      "What was the scale of the systems you worked on?",
+    icon: <Briefcase className="w-5 h-5" />,
+    score: 80,
+    strengths: ["Real-world backend development experience", "Relevant tech stack usage"],
+    improvements: [
+      "Add specific metrics and outcomes",
+      "Highlight team collaboration examples",
     ],
   },
   {
     title: "Technical Skills",
-    score: 95,
-    questions: [
-      "Can you provide a complete list of programming languages and tools?",
-      "Are there specific areas where you have additional certifications?",
+    icon: <Code className="w-5 h-5" />,
+    score: 85,
+    strengths: ["Diverse programming language knowledge", "Experience with modern frameworks"],
+    improvements: [
+      "Create a dedicated skills section",
+      "Group skills by proficiency level",
+    ],
+  },
+  {
+    title: "Honors & Awards",
+    icon: <Award className="w-5 h-5" />,
+    score: 90,
+    strengths: ["Sustainable Product Award", "Multiple Dean's List awards"],
+    improvements: [
+      "Add context to awards",
+      "Include competition details if relevant",
     ],
   },
 ];
@@ -55,15 +71,20 @@ const Index = () => {
       feedbackSections.length
   );
 
+  const letterGrade = "B+";
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
-      <div className="container max-w-3xl py-12">
-        <div className="glass-card rounded-xl p-8 mb-8 text-center animate-fade-in">
-          <h1 className="text-3xl font-semibold mb-6">Resume Feedback</h1>
-          <ScoreCircle score={overallScore} />
-          <p className="mt-4 text-muted-foreground">
-            Your resume shows strong potential. Here are some suggestions to make it
-            even better.
+    <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white">
+      <div className="container max-w-4xl py-12">
+        <div className="glass-card rounded-xl p-8 mb-8 text-center animate-fade-in bg-white/90 backdrop-blur-sm border border-sky-100 shadow-lg">
+          <h1 className="text-3xl font-semibold mb-6 text-sky-900">Resume Analysis</h1>
+          <div className="flex flex-col items-center gap-4">
+            <ScoreCircle score={overallScore} />
+            <div className="text-2xl font-bold text-sky-700">Grade: {letterGrade}</div>
+          </div>
+          <p className="mt-4 text-sky-700/80">
+            Your resume shows strong potential with excellent academic credentials and research experience.
+            Here are detailed suggestions to make it even better.
           </p>
         </div>
 
