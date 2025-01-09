@@ -1,5 +1,6 @@
 import { ScoreCircle } from "@/components/ScoreCircle";
 import { FeedbackSection } from "@/components/FeedbackSection";
+import { FollowUpQuestions } from "@/components/FollowUpQuestions";
 import { Award, BookOpen, Briefcase, Code, GraduationCap, ScrollText } from "lucide-react";
 
 const feedbackSections = [
@@ -88,7 +89,7 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 mb-8">
           {feedbackSections.map((section, index) => (
             <div
               key={section.title}
@@ -101,6 +102,8 @@ const Index = () => {
             </div>
           ))}
         </div>
+
+        <FollowUpQuestions />
       </div>
     </div>
   );
