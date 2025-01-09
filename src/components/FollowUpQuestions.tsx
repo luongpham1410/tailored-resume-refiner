@@ -74,33 +74,33 @@ export const FollowUpQuestions = () => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   return (
-    <div className="glass-card rounded-lg p-6 mb-8 animate-fade-in">
-      <h2 className="text-2xl font-semibold text-sky-900 mb-6">Follow-up Questions</h2>
-      <p className="text-sky-700 mb-6">
+    <div className="glass-card rounded-lg p-6 mb-8 animate-fade-in bg-white/90 backdrop-blur-sm border border-[#0EA5E9]/20 shadow-lg">
+      <h2 className="text-2xl font-semibold text-[#222222] mb-6">Follow-up Questions</h2>
+      <p className="text-[#555555] mb-6">
         To make your CV more impactful, consider addressing these questions to add specific details and tailor it to your target roles:
       </p>
       <div className="space-y-4">
         {followUpQuestions.map((category) => (
           <div
             key={category.title}
-            className="border border-sky-100 rounded-lg overflow-hidden bg-white/50"
+            className="border border-[#0EA5E9]/20 rounded-lg overflow-hidden bg-white/50"
           >
             <button
-              className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-sky-50/50 transition-colors"
+              className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-[#F1F0FB] transition-colors"
               onClick={() => setExpandedCategory(expandedCategory === category.title ? null : category.title)}
             >
-              <h3 className="text-lg font-medium text-sky-800">{category.title}</h3>
+              <h3 className="text-lg font-medium text-[#222222]">{category.title}</h3>
               <ChevronDown
-                className={`w-5 h-5 text-sky-600 transition-transform ${
+                className={`w-5 h-5 text-[#0EA5E9] transition-transform ${
                   expandedCategory === category.title ? "rotate-180" : ""
                 }`}
               />
             </button>
             {expandedCategory === category.title && (
-              <div className="px-4 py-3 border-t border-sky-100 bg-white/30">
+              <div className="px-4 py-3 border-t border-[#0EA5E9]/20 bg-white/30">
                 <ul className="list-disc pl-5 space-y-2">
                   {category.questions.map((question, index) => (
-                    <li key={index} className="text-sky-700">
+                    <li key={index} className="text-[#555555]">
                       {question}
                     </li>
                   ))}
